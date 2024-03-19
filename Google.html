@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google</title>
+    <style>
+        body {
+            font-family: arial;
+            background-color: #202124;
+            margin: 0;
+            height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        header div {
+            color: grey;
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+            margin: 0 10px;
+        }
+
+        header img {
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        header button {
+            background-color: transparent;
+            border: none;
+        }
+
+        #tres {
+            border-radius: 0%;
+        }
+
+        #pantalla {
+            background-color: transparent;
+            margin: 0;
+            min-height: 70vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #contenedor {
+            width: 60%;
+            height: 60%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #cont {
+            align-items: center;
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #busqueda {
+            margin-top: 20px;
+            border: 1px solid grey;
+            background-color: transparent;
+            display: flex;
+            width: 600px;
+            height: 50px;
+            border-color: grey;
+            border-radius: 30px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #busqueda img {
+            padding: 4px;
+            width: 25px;
+            height: 25px;
+        }
+
+        form {
+            width: 75%;
+            height: 50%;
+        }
+
+        #barra {
+            font-size: 15px;
+            font-family: arial;
+            color: white;
+            background-color: transparent;
+            border-color: transparent;
+            width: 100%;
+            outline: none;
+        }
+
+        #pantalla span {
+            padding: 30px;
+        }
+
+        #pantalla span button {
+            height: 35px;
+            color: white;
+            border: none;
+            background-color: #303134;
+            margin-left: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: #171717;
+            width: 100%;
+            height: 10%;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        footer div {
+            background-color: #171717;
+            height: 50%;
+            width: 100%;
+            display: flex;
+            text-decoration: none;
+            color: white;
+        }
+
+        footer p,
+        footer a {
+        	font-size: 13px;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer span {
+            text-decoration: none;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        hr {
+            background-color: #202124;
+            height: 2px;
+            border: none;
+        }
+
+        #izq {
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        #cent {
+            width: 100%;
+            justify-content: center;
+        }
+
+        #dere {
+            margin-right: 10px;
+            width: 100%;
+            justify-content: flex-end;
+        }
+        footer img{
+        	margin-top: 10px;
+        	height: 15px;
+        	width:15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="https://about.google/?fg=1&utm_source=google-ES&utm_medium=referral&utm_campaign=hp-header">Sobre Google</a>
+            <a href="https://store.google.com/ES?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=es-ES">Tienda</a>
+        </div>
+        <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+        <a href="https://www.google.com/imghp?hl=es&ogbl">Imagenes</a>
+        <button><img id="tres"
+                src="https://cdn.icon-icons.com/icons2/1129/PNG/512/buttonsymbolofninedots_80014.png"></button>
+        <a href="https://myaccount.google.com/?hl=es&utm_source=OGB&utm_medium=act"><img
+                src="https://us.123rf.com/450wm/alekseyvanin/alekseyvanin1704/alekseyvanin170403663/76699411-vector-de-icono-de-usuario-ilustraci%C3%B3n-de-logotipo-s%C3%B3lido-de-perfil-pictograma-aislado-en-blanco.jpg"
+                alt=""></a>
+    </header>
+    <div id="pantalla">
+        <div id="contenedor">
+            <img
+                src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png"
+                alt="">
+            <div id="cont">
+                <button id="busqueda">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2866/2866321.png" alt="">
+                    <form id="searchForm">
+                        <input id="barra" type="text" autocomplete="off">
+                    </form>
+                    <img id="micro"
+                        src="https://i.pinimg.com/originals/ea/5f/5b/ea5f5bd3b4110f2afb958049b4096d3a.png" alt="">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/1200px-Google_Lens_Icon.svg.png"
+                        alt="">
+                </button>
+                <span><button>Buscar con Google</button> <a href="https://doodles.google/"><button>Voy a tener Suerte</button></a></span>
+            </div>
+        </div>
+        <script>
+            document.getElementById("searchForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+                let searchTerm = document.getElementById("barra").value;
+                let searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(searchTerm);
+                window.location.href = searchUrl;
+            });
+        </script>
+    </div>
+    <footer>
+        <div>
+            <p>España</p>
+        </div>
+        <hr>
+        <div id="segundo">
+            <span id="izq">
+                <a href="https://www.google.com/intl/es_es/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Publicidad</a>
+                <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Empresa</a>
+                <a href="https://google.com/search/howsearchworks/?fg=1">Cómo funciona la Búsqueda</a>
+            </span>
+            <span id="cent">
+            	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" alt="">
+                <a href="https://sustainability.google/intl/es/carbon-free/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Tres décadas de acción climática: descubre lo que estamos haciendo</a>
+            </span>
+            <span id="dere">
+                <a href="https://policies.google.com/privacy?hl=es&fg=1">Privacidad</a>
+                <a href="https://policies.google.com/terms?hl=es&fg=1">Términos</a>
+                <a href="">Configuración</a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>
